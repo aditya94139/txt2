@@ -26,8 +26,7 @@ bot = Client(
     "bot",
     api_id=api_id,
     api_hash=api_hash,
-    bot_token=bot_token,
-    chat_id=-1002046435003)
+    bot_token=bot_token)
 
 
 @bot.on_message(filters.command(["start"]))
