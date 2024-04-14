@@ -9,7 +9,7 @@ import subprocess
 
 import core as helper
 from utils import progress_bar
-from vars import api_id, api_hash, bot_token, auth_users, auth_groups,
+from vars import api_id, api_hash, bot_token, auth_users, auth_groups
 from aiohttp import ClientSession
 from pyromod import listen
 from subprocess import getstatusoutput
