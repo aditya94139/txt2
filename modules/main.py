@@ -9,7 +9,7 @@ import subprocess
 
 import core as helper
 from utils import progress_bar
-from vars import api_id, api_hash, bot_token, OWNER_ID, SUDO_USERS,
+from vars import api_id, api_hash, bot_token, auth_users, auth_groups,
 from aiohttp import ClientSession
 from pyromod import listen
 from subprocess import getstatusoutput
@@ -27,7 +27,8 @@ bot = Client(
     api_id=api_id,
     api_hash=api_hash,
     bot_token=bot_token,
-auth_users = [841021123,-1002046435003] )
+    auth_users=auth_users,
+    auth_groups=auth_groups,)
 
 
 @bot.on_message(filters.command(["start"]))
