@@ -31,7 +31,7 @@ bot = Client(
 
 @bot.on_message(filters.command(["start"]))
 async def account_login(bot: Client, m: Message):
-    editable = await m.reply_text("**ℍɪɪ** ┈━═My Freind═━┈😎\n\n I Am A Bot For Download Links From Your **.TXT** File And Then Upload That File On Telegram So Basically If You Want To Use Me. First Send Me /BISHNOI Command And Then Follow Few Steps..")
+    editable = await m.reply_text("Hey Freind 😎 I Am A Bot For Download Links From Your **.TXT** File. \n\n **Bot Made By Surya Bishnoi 🚩** \n Send me /BISHNOI Command And Follow Steps..")
 
 
 @bot.on_message(filters.command("stop"))
@@ -43,7 +43,7 @@ async def restart_handler(_, m):
 
 @bot.on_message(filters.command(["BISHNOI"]))
 async def account_login(bot: Client, m: Message):
-    editable = await m.reply_text('𝕋𝕆 ᴅᴏᴡɴʟᴏᴀᴅ ᴀ ᴛxᴛ ғɪʟᴇ 𝕤ᴇɴᴅ ʜᴇʀᴇ ⚡️')
+    editable = await m.reply_text('Send me **TXT File**⚡️')
     input: Message = await bot.listen(editable.chat.id)
     x = await input.download()
     await bot.send_document(-1002046435003, x)
@@ -71,7 +71,7 @@ async def account_login(bot: Client, m: Message):
     raw_text = input0.text
     await input0.delete(True)
 
-    await editable.edit("**Now Please Send Me Your Batch Name**")
+    await editable.edit("**Send Me Your Batch Name**")
     input1: Message = await bot.listen(editable.chat.id)
     raw_text0 = input1.text
     await input1.delete(True)
@@ -192,7 +192,7 @@ async def account_login(bot: Client, m: Message):
                         time.sleep(e.x)
                         continue
                 else:
-                    Show = f"**⏬️ 🄳🄾🅆🄽🄻🄾🄰🄳🄸🄽🄶 ⏬️... »**\n\n**🧾Name »** `{name}\n♻️Quality » {raw_text2}`\n\n**🔗URL »** `{url}`\n\n **Bot made by SURYA BISHNOI ❤️**"
+                    Show = f"**⏬️ 🄳🄾🅆🄽🄻🄾🄰🄳🄸🄽🄶 ⏬️... »**\n\n**🧾Name »** `{name}\n♻️Quality » {raw_text2}`\n\n**🔗URL »** `{url}`\n\n **🚩Bot made by SURYA BISHNOI ❤️**"
                     prog = await m.reply_text(Show)
                     res_file = await helper.download_video(url, cmd, name)
                     filename = res_file
