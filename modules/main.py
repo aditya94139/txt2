@@ -28,7 +28,7 @@ bot = Client(
     api_hash=api_hash,
     bot_token=bot_token,
     auth_users=auth_users,
-    auth_groups=auth_groups,)
+    auth_groups=auth_groups)
 
 
 @bot.on_message(filters.command(["start"]))
