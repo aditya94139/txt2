@@ -31,7 +31,7 @@ bot = Client(
 
 @bot.on_message(filters.command(["start"]) & filters.user(ADMINS))
 async def account_login(bot: Client, m: Message):
-    user = m.from_user.id if m.from_user is not ADMINS:
+    user = m.from_user.id if m.from_user is not in ADMINS:
         await m.reply("**BOT TERE LIYE NHI BANAYA, JA NIKAL KHUD BHI KUCHH KAR LE MEHNAT**", quote=True)
         return
     else:
