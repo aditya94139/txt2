@@ -117,7 +117,7 @@ async def account_login(bot: Client, m: Message):
     await input6.delete(True)
     await editable.delete()
 
-    thumb = https://telegra.ph/file/69523f2e37ddf316b1623.jpg
+    thumb = "https://telegra.ph/file/69523f2e37ddf316b1623.jpg"
     if thumb.startswith("http://") or thumb.startswith("https://"):
         getstatusoutput(f"wget '{thumb}' -O 'thumb.jpg'")
         thumb = "thumb.jpg"
