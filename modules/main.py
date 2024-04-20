@@ -6,6 +6,7 @@ import time
 import asyncio
 import requests
 import subprocess
+import telegraph
 
 import core as helper
 from utils import progress_bar
@@ -120,7 +121,7 @@ async def account_login(bot: Client, m: Message):
     thumb = "https://telegra.ph/file/69523f2e37ddf316b1623.jpg"
     if thumb.startswith("http://") or thumb.startswith("https://"):
         getstatusoutput(f"wget '{thumb}' -O 'thumb.jpg'")
-        thumb = "thumb.jpg"
+        thumb = "https://telegra.ph/file/69523f2e37ddf316b1623.jpg"
     else:
         thumb == "no"
 
