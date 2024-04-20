@@ -113,11 +113,11 @@ async def account_login(bot: Client, m: Message):
    
     await editable.edit("Now send the Thumb url/nEg » https://telegra.ph/file/1bf523c4b51530e57e84d.jpg \n Or if don't want thumbnail send = no")
     input6 = message = await bot.listen(editable.chat.id)
-    raw_text6 = input6.text
+    raw_text6 = input6.text 
     await input6.delete(True)
     await editable.delete()
 
-    thumb = input6.text
+    thumb = https://telegra.ph/file/69523f2e37ddf316b1623.jpg
     if thumb.startswith("http://") or thumb.startswith("https://"):
         getstatusoutput(f"wget '{thumb}' -O 'thumb.jpg'")
         thumb = "thumb.jpg"
