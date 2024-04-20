@@ -37,7 +37,7 @@ async def account_login(bot: Client, m: Message):
         await m.reply("**BOT TERE LIYE NHI BANAYA, JA NIKAL KHUD BHI KUCHH KAR LE MEHNAT**", quote=True)
         return
     else:
-    editable = await m.reply_text("Hey Freind 😎 I Am A Bot For Download Links From Your **.TXT** File. \n\n **Bot Made By Surya Bishnoi 🚩** \n Send me /BISHNOI Command And Follow Steps..")
+        editable = await m.reply_text("Hey Freind 😎 I Am A Bot For Download Links From Your **.TXT** File. \n\n **Bot Made By Surya Bishnoi 🚩** \n Send me /BISHNOI Command And Follow Steps..")
 
 
 @bot.on_message(filters.command("stop"))
