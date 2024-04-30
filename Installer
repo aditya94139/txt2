@@ -12,6 +12,7 @@ python-dotenv==1.0.0
 requests==
 soupsieve==2.4.1
 TgCrypto==1.2.5
+telegraph
 urllib3==2.0.3
 websockets==11.0.3
 yt-dlp==2023.6.22
