@@ -1,4 +1,4 @@
-async-lru==2.0.4
+async-lru==2.0.2
 certifi==2024.01.21
 charset-normalizer==3.1.0
 idna==3.4
@@ -8,8 +8,8 @@ pycryptodome==3.18.0
 pyrogram==2.0.106
 pyromod==1.5
 PySocks==1.7.1
-python-dotenv==1.0.1
-requests
+python-dotenv==1.0.0
+requests==2.31.0
 soupsieve==2.4.1
 TgCrypto==1.2.5
 telegraph
