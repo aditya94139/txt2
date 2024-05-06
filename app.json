@@ -9,7 +9,7 @@
     ],
     "repository": "https://github.com/Ashrafmdmatin41/txt_leech",
     "success_url": "https://t.me/thebishnoi29_bot",
-    "stack": "container",
+    "stack": "heroku-22",
     "env": {
         "API_ID": {
             "description": "𝑬𝒏𝒕𝒆𝒓 𝒀𝒐𝒖𝒓 𝑨𝒑𝒊 𝑰𝑫",
