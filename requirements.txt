@@ -1,5 +1,5 @@
 async-lru==2.0.2
-certifi==2024.01.21
+certifi==2024.2.2
 charset-normalizer==3.1.0
 idna==3.4
 mutagen==1.46.0
