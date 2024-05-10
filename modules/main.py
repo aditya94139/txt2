@@ -113,16 +113,28 @@ async def account_login(bot: Client, m: Message):
     else:
         MR = raw_text3
    
-    await editable.edit("Now send the Thumb url/nEg » https://graph.org/file/7af9a8ab33a563cc7e6d4.jpg \n Or if don't want thumbnail send = no")
-    input6 = message = await bot.listen(editable.chat.id)
-    raw_text6 = input6.text 
-    await input6.delete(True)
-    await editable.delete()
+    #await editable.edit("Now send the Thumb url/nEg » https://graph.org/file/7af9a8ab33a563cc7e6d4.jpg \n Or if don't want thumbnail send = no")
+  #  input6 = message = await bot.listen(editable.chat.id)
+  #  raw_text6 = input6.text 
+   # await input6.delete(True)
+   # await editable.delete()
 
-    thumb = "https://telegra.ph/file/69523f2e37ddf316b1623.jpg"
+   # thumb = "https://telegra.ph/file/69523f2e37ddf316b1623.jpg"
+   # if thumb.startswith("http://") or thumb.startswith("https://"):
+   #     getstatusoutput(f"wget '{thumb}' -O 'thumb.jpg'")
+    #    thumb = "https://graph.org/file/7af9a8ab33a563cc7e6d4.jpg"
+   # else:
+       # thumb == "no"
+
+    await editable.edit("Now send the **Thumbnail URL**\n\nEg » https://graph.org/file/7af9a8ab33a563cc7e6d4.jpg\n\nOr if don't want thumbnail send = no")
+    input6 = message = await bot.listen(editable.chat.id)
+    raw_text6 = input6.text
+    await input6.delete(True)
+    thumb = input6.text
+    await editable.delete()
     if thumb.startswith("http://") or thumb.startswith("https://"):
         getstatusoutput(f"wget '{thumb}' -O 'thumb.jpg'")
-        thumb = "https://graph.org/file/7af9a8ab33a563cc7e6d4.jpg"
+        thumb = "thumb.jpg"
     else:
         thumb == "no"
 
