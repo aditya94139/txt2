@@ -30,9 +30,9 @@ bot = Client(
     bot_token=bot_token)
 
 
-@bot.on_message(filters.command(["start"]) & filters.user(ADMINS))
+@bot.on_message(filters.command(["start"]))
 async def account_login(bot: Client, m: Message):
-    editable = await m.reply_text("Hey Freind 😎 I Am A Bot For Download Links From Your **.TXT** File. \n\n **Bot Made By Matin ** \n Send me /txt Command And Follow Steps..")
+    editable = await m.reply_text("Hey Freind 😎 I Am A Bot For Download Links From Your **.TXT** File. \n\n **Bot Made By 𝙈𝘼𝙃𝙄® ** \n\n Send /mahi ")
 
 
 @bot.on_message(filters.command("stop") & filters.user(ADMINS))
@@ -42,7 +42,7 @@ async def restart_handler(_, m):
 
 
 
-@bot.on_message(filters.command(["txt"]) & filters.user(ADMINS))
+@bot.on_message(filters.command(["mahi"]) & filters.user(ADMINS))
 async def account_login(bot: Client, m: Message):
     editable = await m.reply_text('Send me **TXT File**⚡️')
     input: Message = await bot.listen(editable.chat.id)
@@ -101,17 +101,17 @@ async def account_login(bot: Client, m: Message):
     
     
 
-    await editable.edit("Now Enter A Caption to add caption on your uploaded file")
+    await editable.edit("Now Enter A Caption to add caption on your uploaded file or sendo `no` to skip")
     input3: Message = await bot.listen(editable.chat.id)
     raw_text3 = input3.text
     await input3.delete(True)
-    highlighter  = f"️ ⁪⁬⁮⁮⁮"
-    if raw_text3 == 'Robin':
+    highlighter  = f"️<b>➳ᴹᴿ°᭄ᴍᴀʜɪ⚔❼✓࿐</b>⁪⁬⁮⁮⁮"
+    if raw_text3 == 'no':
         MR = highlighter 
     else:
         MR = raw_text3
    
-    await editable.edit("Now send the Thumb url/nEg » https://telegra.ph/file/1bf523c4b51530e57e84d.jpg \n Or if don't want thumbnail send = no")
+    await editable.edit("Now send the Thumb url/nEg » https://graph.org/file/7af9a8ab33a563cc7e6d4.jpg \n Or if don't want thumbnail send = no")
     input6 = message = await bot.listen(editable.chat.id)
     raw_text6 = input6.text 
     await input6.delete(True)
@@ -120,7 +120,7 @@ async def account_login(bot: Client, m: Message):
     thumb = "https://telegra.ph/file/69523f2e37ddf316b1623.jpg"
     if thumb.startswith("http://") or thumb.startswith("https://"):
         getstatusoutput(f"wget '{thumb}' -O 'thumb.jpg'")
-        thumb = "https://telegra.ph/file/69523f2e37ddf316b1623.jpg"
+        thumb = "https://graph.org/file/7af9a8ab33a563cc7e6d4.jpg"
     else:
         thumb == "no"
 
@@ -207,7 +207,7 @@ async def account_login(bot: Client, m: Message):
 
     except Exception as e:
         await m.reply_text(e)
-    await m.reply_text("**DONE BRO 😎**")
+    await m.reply_text("**💛 DONE BRO 😎**")
 
 
 bot.run()
