@@ -49,7 +49,9 @@ async def account_login(bot: Client, m: Message):
     input: Message = await bot.listen(editable.chat.id)
     x = await input.download()
     await input.delete(True)
-    await bot.send_document(OWNER, document=x)
+    file_name, ext = os.path.splitext(os.path.basename(x)) 
+
+
 
     path = f"./downloads/{m.chat.id}"
 
@@ -107,7 +109,7 @@ async def account_login(bot: Client, m: Message):
     input3: Message = await bot.listen(editable.chat.id)
     raw_text3 = input3.text
     await input3.delete(True)
-    highlighter  = f"️<b>➳ᴹᴿ°᭄ᴍᴀʜɪ⚔❼✓࿐</b>⁪⁬⁮⁮⁮"
+    highlighter  = f"️<b>➳Aditya</b>⁪⁬⁮⁮⁮"
     if raw_text3 == 'no':
         MR = highlighter 
     else:
@@ -177,8 +179,8 @@ async def account_login(bot: Client, m: Message):
 
             try:  
                 
-                cc = f'**[🎬] Vid_ID:** {str(count).zfill(3)}.\n **Tɪᴛʟᴇ » {𝗻𝗮𝗺𝗲𝟭} ({res}) {MR}.mkv\n\n **Bᴀᴛᴄʜ** » **{raw_text0}**'
-                cc1 = f'**[📕] Pdf_ID:** {str(count).zfill(3)}.\n **Tɪᴛʟᴇ » {𝗻𝗮𝗺𝗲𝟭}{MR}.pdf \n\n **Bᴀᴛᴄʜ** » **{raw_text0}**'
+                cc = f'**[🎬] Vid_ID:** {str(count).zfill(3)}.\n **➼ 𝗧𝗼𝗽𝗶𝗰 : {𝗻𝗮𝗺𝗲𝟭} ({res}) {MR}.mkv\n\n **Batch Name »** **{raw_text0}**'
+                cc1 = f'**[📕] Pdf_ID:** {str(count).zfill(3)}.\n **➼ 𝗧𝗼𝗽𝗶𝗰 : {𝗻𝗮𝗺𝗲𝟭}{MR}.pdf \n\n **Batch Name »** **{raw_text0}**'
                 if "drive" in url:
                     try:
                         ka = await helper.download(url, name)
@@ -204,7 +206,7 @@ async def account_login(bot: Client, m: Message):
                         time.sleep(e.x)
                         continue
                 else:
-                    Show = f"**⏬️ 🄳🄾🅆🄽🄻🄾🄰🄳🄸🄽🄶 ⏬️... »**\n\n**🧾Name »** `{name}\n♻️Quality » {raw_text2}`\n\n**🔗URL »** `{url}`\n\n **🍁 Bot made by 𝔸𝔻𝕀𝕋𝕐𝔸⚡**"
+                    Show = f"**⏬️ 🄳🄾🅆🄽🄻🄾🄰🄳🄸🄽🄶 ⏬️**\n\n**📝Name »** `{name}\n❄Quality » {raw_text2}`\n\n**🔗URL » {url}"
                     prog = await m.reply_text(Show)
                     res_file = await helper.download_video(url, cmd, name)
                     filename = res_file
