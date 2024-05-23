@@ -33,7 +33,7 @@ bot = Client(
 
 @bot.on_message(filters.command(["start"]))
 async def account_login(bot: Client, m: Message):
-    editable = await m.reply_text("I Am A Bot For Download Links From Your **.TXT** File. \n\n **Bot Made By 𝙈𝘼𝙃𝙄® ** \n\n Send /mahi ")
+    editable = await m.reply_text("I Am A Bot For Download Links From Your **.TXT** File. \n\n **Bot Made By 𝔸𝔻𝕀𝕋𝕐𝔸⚡**")
 
 
 @bot.on_message(filters.command("stop") & filters.user(ADMINS))
@@ -43,7 +43,7 @@ async def restart_handler(_, m):
 
 
 
-@bot.on_message(filters.command(["mahi"]) & filters.user(ADMINS))
+@bot.on_message(filters.command(["up_vid"]) & filters.user(ADMINS))
 async def account_login(bot: Client, m: Message):
     editable = await m.reply_text('Send me **TXT File**⚡️')
     input: Message = await bot.listen(editable.chat.id)
@@ -204,7 +204,7 @@ async def account_login(bot: Client, m: Message):
                         time.sleep(e.x)
                         continue
                 else:
-                    Show = f"**⏬️ 🄳🄾🅆🄽🄻🄾🄰🄳🄸🄽🄶 ⏬️... »**\n\n**🧾Name »** `{name}\n♻️Quality » {raw_text2}`\n\n**🔗URL »** `{url}`\n\n **🍁 Bot made by 𝙈𝘼𝙃𝙄® 🫰❤️‍🔥**"
+                    Show = f"**⏬️ 🄳🄾🅆🄽🄻🄾🄰🄳🄸🄽🄶 ⏬️... »**\n\n**🧾Name »** `{name}\n♻️Quality » {raw_text2}`\n\n**🔗URL »** `{url}`\n\n **🍁 Bot made by 𝔸𝔻𝕀𝕋𝕐𝔸⚡**"
                     prog = await m.reply_text(Show)
                     res_file = await helper.download_video(url, cmd, name)
                     filename = res_file
