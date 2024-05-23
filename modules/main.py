@@ -105,11 +105,11 @@ async def account_login(bot: Client, m: Message):
     
     
 
-    await editable.edit("Now Enter A Caption to add caption on your uploaded file or sendo `no` to skip")
+    await editable.edit("Now Enter A Caption to add caption on your uploaded file or send `no` to skip")
     input3: Message = await bot.listen(editable.chat.id)
     raw_text3 = input3.text
     await input3.delete(True)
-    highlighter  = f"️<b>➳Aditya</b>⁪⁬⁮⁮⁮"
+    highlighter  = f"️<b>Aditya</b>⁪⁬⁮⁮⁮"
     if raw_text3 == 'no':
         MR = highlighter 
     else:
